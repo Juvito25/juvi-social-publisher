@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.juvi-gradient {
+    background: linear-gradient(135deg, #A8D95F 0%, #81A64B 100%);
+}
+
+.juvi-card {
+    background: #1a1a1a;
+    border: 1px solid #7D8C65;
+    border-radius: 12px;
+}
+
+.juvi-input {
+    background: #262626;
+    border: 1px solid #7D8C65;
+    border-radius: 8px;
+    color: #fff;
+    padding: 12px 16px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.juvi-input:focus {
+    outline: none;
+    border-color: #A8D95F;
+    box-shadow: 0 0 0 3px rgba(168, 217, 95, 0.1);
+}
+
+.juvi-btn {
+    background: #A8D95F;
+    color: #262626;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.juvi-btn:hover {
+    background: #D2F2A2;
+    transform: translateY(-1px);
+}
+
+.juvi-btn:disabled {
+    background: #7D8C65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.drop-zone {
+    border: 2px dashed #7D8C65;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.drop-zone:hover {
+    border-color: #A8D95F;
+    background: rgba(168, 217, 95, 0.05);
+}
+
+.drop-zone.drag-over {
+    border-color: #A8D95F;
+    background: rgba(168, 217, 95, 0.1);
+}
+
+.social-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #7D8C65;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.social-checkbox:checked {
+    background: #A8D95F;
+    border-color: #A8D95F;
+}
+
+.social-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-pending {
+    background: rgba(125, 140, 101, 0.2);
+    color: #D2F2A2;
+}
+
+.status-shared {
+    background: rgba(168, 217, 95, 0.2);
+    color: #A8D95F;
+}
+
+.status-failed {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
